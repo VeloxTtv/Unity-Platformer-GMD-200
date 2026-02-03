@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
-        moveSpeed = 3f;
-        jumpForce = 40f;
+        moveSpeed = 3.5f;
+        jumpForce = 60f;
         isJumping = false;
         isShooting = false;
     }
