@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|c:\\sp26-gmd200-pr2-violet.bears-git\\2dshootergmd\\assets\\unityscripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|c:\\sp26-gmd200-pr2-violet.bears-git\\2dshootergmd\\assets\\unityscripts\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|solutionrelative:assets\\unityscripts\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\assets\\unityscripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|solutionrelative:assets\\unityscripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\assets\\unityscripts\\playercollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|solutionrelative:assets\\unityscripts\\playercollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|c:\\sp26-gmd200-pr2-violet.bears-git\\2dshootergmd\\assets\\unityscripts\\muzzleflash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|solutionrelative:assets\\unityscripts\\muzzleflash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Library\\PackageCache\\com.unity.2d.animation@fd6eeea117b7\\Runtime\\SpriteLib\\SpriteLibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +21,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\assets\\unityscripts\\guncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|solutionrelative:assets\\unityscripts\\guncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\assets\\unityscripts\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0830FFA-9F2F-54F6-73F9-45C35DEA68C7}|Assembly-CSharp.csproj|solutionrelative:assets\\unityscripts\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,32 +34,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "muzzleFlash.cs",
-              "DocumentMoniker": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\muzzleFlash.cs",
-              "RelativeDocumentMoniker": "Assets\\UnityScripts\\muzzleFlash.cs",
-              "ToolTip": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\muzzleFlash.cs",
-              "RelativeToolTip": "Assets\\UnityScripts\\muzzleFlash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T05:30:16.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\UnityScripts\\PlayerController.cs",
-              "ToolTip": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\UnityScripts\\PlayerController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBwAAAAcAAAAAAAAAA==",
+              "Title": "enemyController.cs",
+              "DocumentMoniker": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\enemyController.cs",
+              "RelativeDocumentMoniker": "Assets\\UnityScripts\\enemyController.cs",
+              "ToolTip": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\enemyController.cs",
+              "RelativeToolTip": "Assets\\UnityScripts\\enemyController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAwCkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T02:55:52.921Z",
+              "WhenOpened": "2026-02-03T17:53:14.603Z",
               "EditorCaption": ""
             },
             {
@@ -66,7 +57,7 @@
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.2d.animation@fd6eeea117b7\\Runtime\\SpriteLib\\SpriteLibrary.cs",
               "ToolTip": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Library\\PackageCache\\com.unity.2d.animation@fd6eeea117b7\\Runtime\\SpriteLib\\SpriteLibrary.cs",
               "RelativeToolTip": "Library\\PackageCache\\com.unity.2d.animation@fd6eeea117b7\\Runtime\\SpriteLib\\SpriteLibrary.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-17T06:05:29.073Z",
               "EditorCaption": ""
@@ -74,15 +65,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\UnityScripts\\PlayerController.cs",
+              "ToolTip": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\UnityScripts\\PlayerController.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAowGQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-25T02:55:52.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PlayerCollider.cs",
               "DocumentMoniker": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\PlayerCollider.cs",
               "RelativeDocumentMoniker": "Assets\\UnityScripts\\PlayerCollider.cs",
               "ToolTip": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\PlayerCollider.cs",
               "RelativeToolTip": "Assets\\UnityScripts\\PlayerCollider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T01:32:51.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T01:32:51.819Z"
             },
             {
               "$type": "Document",
@@ -94,8 +96,19 @@
               "RelativeToolTip": "Assets\\UnityScripts\\gunController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T07:30:58.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-25T07:30:58.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnemySpawner.cs",
+              "DocumentMoniker": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\EnemySpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\UnityScripts\\EnemySpawner.cs",
+              "ToolTip": "C:\\sp26-gmd200-pr2-violet.bears-git\\2DShooterGMD\\Assets\\UnityScripts\\EnemySpawner.cs",
+              "RelativeToolTip": "Assets\\UnityScripts\\EnemySpawner.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T17:53:18.222Z"
             },
             {
               "$type": "Bookmark",

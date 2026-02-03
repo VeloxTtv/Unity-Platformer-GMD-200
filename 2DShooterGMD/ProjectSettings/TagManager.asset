@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Platform
   - EnemyCharacter
+  - Bullet
+  - Border
   layers:
   - Default
   - TransparentFX

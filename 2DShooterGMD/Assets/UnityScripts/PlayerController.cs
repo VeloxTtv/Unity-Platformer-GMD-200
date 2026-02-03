@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject playerGun;
 
+    public int healthPoints;
+
     private float moveSpeed;
 
     private float jumpForce;
@@ -17,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private bool facingRight = true;
     public bool isMoving;
     public bool isShooting;
-
+    public float yVelocity;
     public  bool isCrouched;
 
     [SerializeField] private GameObject bulletPrefab;
@@ -25,35 +27,38 @@ public class PlayerController : MonoBehaviour
     [Range(0.1f, 2f)]
     [SerializeField] private float fireRate = 0.5f;
     private float fireTimer;
-    
-    //unfinished, ADD THIS!!
-    public Sprite muzzleFlash;
-    [Range(0f, 5f)]
-    public int FramesToFlash = 1;
 
     private Rigidbody2D rb2D;
     private Animator anim;
+
+    public SpriteRenderer healthBarSprite;
+    public Sprite[] healthSprites;
+
     void Start()
     {
-        StartCoroutine(DoFlash());
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
+        healthPoints = 4;
         moveSpeed = 3.5f;
         jumpForce = 60f;
         isJumping = false;
         isShooting = false;
+        yVelocity = 0;
     }
 
     void Update()
     {
+        UpdateHealthBar();
         AnimationControllers();
         FlipController();
         Crouched();
 
+        yVelocity = rb2D.linearVelocity.y;
+
         moveHorizontal = Input.GetAxisRaw("Horizontal");
 
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && !isJumping && !isCrouched)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && !isJumping && !isCrouched && yVelocity == 0)
         {
             rb2D.linearVelocity = new Vector2(rb2D.linearVelocity.x, jumpForce);
             anim.SetTrigger("Jump");
@@ -81,21 +86,21 @@ public class PlayerController : MonoBehaviour
         }
 
             anim.SetFloat("yVelocity", rb2D.linearVelocity.y);
-    }
 
-    IEnumerator DoFlash()
-    {
-        var renderer = GetComponent<SpriteRenderer>();
-        var originalSprite = renderer.sprite;
-        renderer.sprite = muzzleFlash;
-
-        var framesFlashed = 0;
-        while (framesFlashed < FramesToFlash)
+        if (healthPoints == 0)
         {
-            framesFlashed++;
-            yield return null;
+            Destroy(gameObject); //Destroy the player
         }
     }
+
+    void UpdateHealthBar()
+    {
+        if (healthSprites.Length > healthPoints)
+        {
+            healthBarSprite.sprite = healthSprites[healthPoints];
+        }
+    }
+
     private void AnimationControllers()
     {
         isMoving = rb2D.linearVelocity.x != 0;
