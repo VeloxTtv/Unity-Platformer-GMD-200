@@ -5,7 +5,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    //[Header("")]
     public GameObject playerGun;
+
+    public UIManager uiManager;
 
     public int healthPoints;
 
@@ -89,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
         if (healthPoints == 0)
         {
-            Destroy(gameObject); //Destroy the player
+            Death();
         }
     }
 
@@ -141,6 +144,12 @@ public class PlayerController : MonoBehaviour
         {
             rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
         }
+    }
+
+    private void Death()
+    {
+        Destroy(gameObject); //Destroy the player
+        uiManager.ToggleDeathScreen();
     }
 
     private void FlipController()

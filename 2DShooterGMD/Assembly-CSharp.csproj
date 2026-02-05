@@ -70,6 +70,7 @@
     <Compile Include="Assets\UnityScripts\PlayerController.cs" />
     <Compile Include="Assets\UnityScripts\enemyController.cs" />
     <Compile Include="Assets\UnityScripts\CameraFollow.cs" />
+    <Compile Include="Assets\UnityScripts\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
