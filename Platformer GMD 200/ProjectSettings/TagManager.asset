@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Platform
+  - tiles
+  - enemy
+  - Star
+  - Trap
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: bg
+    uniqueID: 2936882505
+    locked: 0
+  - name: bg2
+    uniqueID: 3441118431
+    locked: 0
+  - name: bg3
+    uniqueID: 1347182601
+    locked: 0
+  - name: bg4
+    uniqueID: 2543633859
+    locked: 0
+  - name: bg5
+    uniqueID: 349553427
+    locked: 0
+  - name: tiles
+    uniqueID: 364427319
+    locked: 0
+  - name: UI
+    uniqueID: 1931096795
+    locked: 0
+  - name: stuff
+    uniqueID: 2458343709
+    locked: 0
+  m_RenderingLayers:
+  - Default
