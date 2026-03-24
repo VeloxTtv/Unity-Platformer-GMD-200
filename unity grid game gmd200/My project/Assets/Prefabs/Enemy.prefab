@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3349383125393197447}
   - component: {fileID: 7284968432520305421}
   - component: {fileID: 5904521987242396478}
+  - component: {fileID: 160771354533269079}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5646173258807337041, guid: 1501be727b25c1244a1448993b78a428, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -156,3 +157,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &160771354533269079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6399519415299810769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd13561181d5944282d2004c2da6c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  _gridManager: {fileID: 0}
+  _player: {fileID: 0}
+  _gridPos: {x: 0, y: 0}
+  _playerGridPos: {fileID: 0}
+  _moveDuration: 0.5
+  _moveCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _differenceInX: 0
+  _differenceInY: 0
