@@ -11,11 +11,13 @@ public class GridManager : MonoBehaviour
     [SerializeField] private GameObject _tilePrefab2;
     [SerializeField] private GameObject _coinPrefab;
     [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private GameObject _player;
     [SerializeField] private int numRows = 6;
     [SerializeField] private int numColumns = 6;
     [SerializeField] private Vector2 tileSize = Vector2.one;
     [SerializeField] private Vector2 padding = new Vector2(0.4f, 0.4f);
 
+    private GameObject _enemyInstance;
     private List<GameObject> _tiles = new List<GameObject>();
 
     void Start() 
@@ -26,6 +28,11 @@ public class GridManager : MonoBehaviour
         int randomEnemySpace = random.Next(numRows * 2, numRows * numColumns);
         while (randomEnemySpace == randomCoinSpace) randomEnemySpace = random.Next(0, numRows * numColumns);
         int currentSpace = 0;
+
+        int coordinateX = randomEnemySpace % numColumns;
+        int coordinateY = randomEnemySpace / numColumns;
+
+        Vector2Int enemyPos = new Vector2Int(coordinateX, coordinateY);
 
         Debug.Log($"Coin at space {randomCoinSpace}, Enemy at space {randomEnemySpace}");
 
@@ -44,8 +51,14 @@ public class GridManager : MonoBehaviour
 
                 if (randomEnemySpace == currentSpace)
                 {
-                    GameObject enemy = Instantiate(_enemyPrefab, pos, Quaternion.identity, transform);
-                    enemy.GetComponent<enemyController>()._playerGridPos = _playerGridPos;
+                    _enemyInstance = Instantiate(_enemyPrefab, pos, Quaternion.identity, transform);
+                    enemyController ec = _enemyInstance.GetComponent<enemyController>();
+                    ec._playerGridPos = _playerGridPos;
+                    ec._player = _player;
+                    ec._gridManager = this;
+                    ec._gridPos = enemyPos;
+
+                    _player.GetComponent<GridMovement>().enemy = ec;
                 }
 
                 if (randomTile == 1)

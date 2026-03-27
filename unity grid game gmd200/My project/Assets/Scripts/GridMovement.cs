@@ -13,6 +13,7 @@ public class GridMovement : MonoBehaviour
     [SerializeField] private float _actionTime = 0f;
     Tween _moveTween;
 
+    [HideInInspector] public enemyController enemy;
     public UIManager uiManager;
 
     void GoToPosition(Vector2Int pos)
@@ -26,38 +27,41 @@ public class GridMovement : MonoBehaviour
         Vector3 targetPos = tile.transform.position;
         Sequence seq = DOTween.Sequence();
         seq.Append(transform.DOMove(targetPos, _moveDuration).SetEase(_moveCurve));
+        seq.OnComplete(() =>
+        {
+            if (enemy != null)
+                enemy.reactToMove();
+            else
+                Debug.LogError("enemy is not assigned on " + gameObject.name);
+        });
         seq.SetLink(gameObject);
         _moveTween = seq;
     }
 
+    void Start()
+    {
+        _playerGridPos.Value = new Vector2Int(0, 0);
+    }
+
     void Update()
     {
-
         if (Time.time > _actionTime)
         {
-            if (Input.GetKeyDown(KeyCode.D) && _gridManager.moveValid(_playerGridPos.Value.x + 1, _playerGridPos.Value.y))
-            {
-                GoToPosition(_playerGridPos.Value + new Vector2Int(1, 0));
+            Vector2Int move = Vector2Int.zero;
 
-                _actionTime = Time.time + _cooldownTime;
-            }
-            if (Input.GetKeyDown(KeyCode.A) && _gridManager.moveValid(_playerGridPos.Value.x - 1, _playerGridPos.Value.y))
-            {
-                GoToPosition(_playerGridPos.Value + new Vector2Int(-1, 0));
+            if (Input.GetKeyDown(KeyCode.D)) move = new Vector2Int(1, 0);
+            else if (Input.GetKeyDown(KeyCode.A)) move = new Vector2Int(-1, 0);
+            else if (Input.GetKeyDown(KeyCode.W)) move = new Vector2Int(0, 1);
+            else if (Input.GetKeyDown(KeyCode.S)) move = new Vector2Int(0, -1);
 
-                _actionTime = Time.time + _cooldownTime;
-            }
-            if (Input.GetKeyDown(KeyCode.W) && _gridManager.moveValid(_playerGridPos.Value.x, _playerGridPos.Value.y + 1))
+            if (move != Vector2Int.zero)
             {
-                GoToPosition(_playerGridPos.Value + new Vector2Int(0, 1));
-
-                _actionTime = Time.time + _cooldownTime;
-            }
-            if (Input.GetKeyDown(KeyCode.S) && _gridManager.moveValid(_playerGridPos.Value.x, _playerGridPos.Value.y - 1))
-            {
-                GoToPosition(_playerGridPos.Value + new Vector2Int(0, -1));
-
-                _actionTime = Time.time + _cooldownTime;
+                Vector2Int targetPos = _playerGridPos.Value + move;
+                if (_gridManager.moveValid(targetPos.x, targetPos.y))
+                {
+                    GoToPosition(targetPos);
+                    _actionTime = Time.time + _cooldownTime;
+                }
             }
         }
     }

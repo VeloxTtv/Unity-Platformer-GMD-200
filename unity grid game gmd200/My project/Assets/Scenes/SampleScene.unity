@@ -493,11 +493,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07d774b781cfdb49a44ed5dc84cf9f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
-  _playerGridPos: {fileID: 0}
+  _playerGridPos: {fileID: 11400000, guid: c35e8eccb44e2f347aa09a7edb3bc48a, type: 2}
   _tilePrefab1: {fileID: 4999954614119648857, guid: e0a5703ff624d9840b471b2c16e5d816, type: 3}
   _tilePrefab2: {fileID: 4999954614119648857, guid: 2aa89af3d8b9f614dafe54de23d20438, type: 3}
   _coinPrefab: {fileID: 8443925966786670372, guid: e977a629c3ecbc341b851cf7a5464a16, type: 3}
   _enemyPrefab: {fileID: 6399519415299810769, guid: 4dfe08e5f440a8e40a9abeeab6616cf8, type: 3}
+  _player: {fileID: 851649674}
   numRows: 8
   numColumns: 8
   tileSize: {x: 1, y: 1}
@@ -1625,6 +1626,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 687430433917224197, guid: 1e3fc63ec12d118478e7f0fc64f1cd16, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 160771354533269079, guid: 4dfe08e5f440a8e40a9abeeab6616cf8, type: 3}
+    - target: {fileID: 687430433917224197, guid: 1e3fc63ec12d118478e7f0fc64f1cd16, type: 3}
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 722329536}
@@ -1634,8 +1639,12 @@ PrefabInstance:
       objectReference: {fileID: 465590598}
     - target: {fileID: 687430433917224197, guid: 1e3fc63ec12d118478e7f0fc64f1cd16, type: 3}
       propertyPath: _moveDuration
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 687430433917224197, guid: 1e3fc63ec12d118478e7f0fc64f1cd16, type: 3}
+      propertyPath: _playerGridPos
+      value: 
+      objectReference: {fileID: 11400000, guid: c35e8eccb44e2f347aa09a7edb3bc48a, type: 2}
     - target: {fileID: 7524432301238253955, guid: 1e3fc63ec12d118478e7f0fc64f1cd16, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
